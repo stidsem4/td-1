@@ -28,7 +28,13 @@ p_05 = Point1D(0.5)
 
 def ajout_point1d(point1, point2):
   x = point1.x + point2.x
-  
   return Point1D(x)
 
-print(f"Addition ok: {ajout_point1d(p_04, p_05)}")  
+print(f"Addition ok: {ajout_point1d(p_04, p_05)}")
+
+def norme1d(p1):
+    return (p1.x ** 2) ** 0.5 
+
+p_09 = ajout_point1d(p_04 , p_05)
+
+print(norme1d(p_09))
