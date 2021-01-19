@@ -68,8 +68,14 @@ print(f"Addition ok: {ajout_point2d(p1, p2) == Point2D(1,1)} ")
 
 
 def ajout_point2d(p_1, p_2):
-    coord = tuple(x + y for x, y in zip(p_1, p2))
+    coord = tuple(x + y for x, y in zip(p_1, p_2))
     return Point2D(coord[0], coord[1])
+
+print(f"Addition ok: {ajout_point2d(p1, p2) == Point2D(1,1)} ")
+
+def ajout_point2d(p_1, p_2):
+    coord = tuple(x + y for x, y in zip(p_1, p_2))
+    return Point2D._make(coord)
 
 print(f"Addition ok: {ajout_point2d(p1, p2) == Point2D(1,1)} ")
 
