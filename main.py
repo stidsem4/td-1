@@ -38,3 +38,12 @@ def norme1d(p1):
 p_09 = ajout_point1d(p_04 , p_05)
 
 print(norme1d(p_09))
+
+Point2D = namedtuple("Point2D", "x y")
+
+p1 = Point2D(0, 1)
+p2 = Point2D(1, 0)
+
+print(p1)
+print(p2)
+
