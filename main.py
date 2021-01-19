@@ -79,3 +79,51 @@ def ajout_point2d(p_1, p_2):
 
 print(f"Addition ok: {ajout_point2d(p1, p2) == Point2D(1,1)} ")
 
+
+# La 3d
+
+Point3D = namedtuple("Point3D", "x y z")
+#x1, x2, x3 ????
+
+def ajout_point3d(p_1, p_2):
+    
+    return Point3D._make((p1 + p2 for p1, p2 in zip(p_1, p_2) ))
+
+p3_1 = Point3D(0,0,1)
+p3_2 = Point3D(0,0,1)
+
+print(ajout_point3d(p3_1, p3_2))
+
+class Point1D:
+    def __init__(self, x):
+        self.x = x
+
+
+np1d = Point1D(0.9)
+print(np1d)
+
+def afficher_point1d(point):
+    return f"Point: {point.x}"
+
+
+
+class Point1D:
+    def __init__(self, x):
+        self.x = x
+
+    def afficher(self):
+        return f"Point: {self.x}"
+
+np1d = Point1D(0.9)
+print(np1d.afficher())
+
+class Point1D:
+    def __init__(self, x):
+        self.x = x
+
+    def __str__(self):
+        return f"Point: {self.x}"
+
+np1d = Point1D(0.9)
+
+print(np1d)
